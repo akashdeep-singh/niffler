@@ -9,6 +9,10 @@
     "clean": "gulp clean",
     "document": "gulp document"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashdeep-singh/niffler.git"
+  },  
   "keywords": [
     "js",
     "nodejs",
