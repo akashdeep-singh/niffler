@@ -1,0 +1,32 @@
+{
+  "name": "niffler",
+  "version": "0.1.1",
+  "description": "A small functional programming library for all Javascript operators.",
+  "main": "dist/niffler.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "document": "gulp document"
+  },
+  "keywords": [
+    "js",
+    "nodejs",
+    "javascript",
+    "operators"
+  ],
+  "author": "Akashdeep Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^6.0.58",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jsdoc": "^0.1.5",
+    "gulp-tsc": "^1.2.6",
+    "gulp-uglify": "^2.0.0",
+    "tape": "^4.6.3",
+    "typescript": "^2.1.5"
+  }
+}
