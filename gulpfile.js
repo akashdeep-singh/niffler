@@ -3,7 +3,7 @@ const typescript = require('gulp-tsc');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const browserify = require('gulp-browserify');
-const jsdoc = require("gulp-jsdoc");
+const jsdoc3 = require('gulp-jsdoc3');
 const del = require('del');
 
 gulp.task('compile', function () {
@@ -28,16 +28,21 @@ gulp.task('browserify', ['compile', 'uglify'], function () {
     .pipe(gulp.dest('dist'));
 });
 
-
 gulp.task('build', ['compile', 'uglify', 'browserify']);
 
 gulp.task('clean', function () {
-  return del(['bin', 'dist']);
+  return del(['bin', 'dist', 'docs']);
 });
 
-gulp.task('document', function () { 
+gulp.task('document', ['build'], function (cb) {
   gulp.src("./bin/niffler.js")
-    .pipe(jsdoc('./docs'));
+    .pipe(jsdoc3({
+      "opts": {
+        "destination": "./docs/"
+      }
+    }, cb));
 });
+
+gulp.task('rebuild', ['clean', 'build', 'document']);
 
 gulp.task('default', ['build']);
