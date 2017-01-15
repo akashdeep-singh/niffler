@@ -8,7 +8,7 @@ Dependencies: none
 ## Installation ##
 
 ```javascript
-npm install niffler or npm i niffler
+npm install niffler // or npm i niffler
 ```
 
 ## Getting Started ##
@@ -35,81 +35,38 @@ Docs for Javascript operators:
 ## API reference
 
 #### Arithmetic
-##### add
-##### concatenate
-##### subtract
-##### multiply
-##### divide
-##### modulous
-##### remainder
-##### exponentiation
-(Only available in Node 7.2.0)
-##### preIncrement
-##### postIncrement
-##### preDecrement
-##### postDecrement
-##### negate
-##### plus
+```
+add, concatenate, subtract, multiply, divide, modulous, remainder,
+exponentiation (Only available in Node 7.2.0), preIncrement,
+postIncrement, preDecrement, postDecrement, negate, plus
+```
 
 
 #### Comparison
-##### isEqual
-##### isStrictlyEqual
-##### isIdentical
-##### isNotEqual
-##### isNotStrictlyEqual
-##### isNotIdentical
-##### isLessThan
-##### isAtMost
-##### isLessThanOrEqual
-##### isGreaterThan
-##### isAtLeast
-##### isGreaterThanOrEqual
+```
+isEqual, isStrictlyEqual, isIdentical, isNotEqual, isNotStrictlyEqual,
+isNotIdentical, isLessThan, isAtMost, isLessThanOrEqual, isGreaterThan,
+isAtLeast, isGreaterThanOrEqual
+```
 
 
 #### Logical
-##### and
-##### or
-##### not
+```
+and, or, not
+```
 
 
 #### Bitwise
-##### and
-##### or
-##### not
-##### xor
-##### rightShift
-##### signPropagatingRightShift
-##### leftShift
-##### unsignedRightShift
-##### zeroFillRightLeft
-
-
-#### Assignment
-##### add
-##### concatenate
-##### subtract
-##### multiply
-##### divide
-##### modulous
-##### remainder
-##### exponentiation
-(Only available in Node 7.2.0)
-##### and
-##### or
-##### xor
-##### rightShift
-##### signPropagatingRightShift
-##### leftShift
-##### unsignedRightShift
-##### zeroFillRightLeft
+```
+and, or, not, xor, rightShift, signPropagatingRightShift, leftShift,
+unsignedRightShift, zeroFillRightLeft
+```
 
 
 #### Misc
-##### conditional
-##### typeOf
-##### isIn
-##### isInstanceOf
+```
+conditional, typeOf, isIn, isInstanceOf
+```
 
 
 ## Future
