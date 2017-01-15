@@ -10,6 +10,7 @@ export namespace Arithmetic {
    * The addition operator produces the sum of numeric operands or string concatenation.
    * Operator: x + y
    * 
+   * @export
    * @param {*} operand1
    * @param {*} operand2
    * @returns {*}
@@ -19,6 +20,7 @@ export namespace Arithmetic {
   }
 
   /**
+   * @export
    * @alias of add
    */
   export let concatenate = add;
@@ -27,6 +29,7 @@ export namespace Arithmetic {
    * The subtraction operator subtracts the two operands, producing their difference.
    * Operator: x - y
    * 
+   * @export
    * @param {number} operand1
    * @param {number} operand2
    * @returns {number}
@@ -39,6 +42,7 @@ export namespace Arithmetic {
    * The multiplication operator produces the product of the operands.
    * Operator: x * y
    * 
+   * @export
    * @param {number} operand1
    * @param {number} operand2
    * @returns {number}
@@ -52,6 +56,7 @@ export namespace Arithmetic {
    * divisor.
    * Operator: x / y
    * 
+   * @export
    * @param {number} operand1
    * @param {number} operand2
    * @returns {number}
@@ -66,6 +71,7 @@ export namespace Arithmetic {
    * var1 by var2 — for example — var1 modulo var2.
    * Operator: var1 % var2
    * 
+   * @export
    * @param {number} operand1
    * @param {number} operand2
    * @returns {number}
@@ -93,6 +99,7 @@ export namespace Arithmetic {
      * the base number.
      * Operator: var1 ** var2
      * 
+     * @export
      * @param {number} operand1
      * @param {number} operand2
      * @returns {number}
@@ -123,6 +130,7 @@ export namespace Arithmetic {
    * If used postfix, with operator after operand (for example, x++), then it returns the value before incrementing.
    * Operator: x++
    * 
+   * @export
    * @param {number} operand
    * @returns {number}
    */
@@ -139,6 +147,7 @@ export namespace Arithmetic {
    * If used prefix (for example, --x), then it returns the value after decrementing.
    * Operator: --x
    * 
+   * @export
    * @param {number} operand
    * @returns {number}
    */
@@ -150,6 +159,7 @@ export namespace Arithmetic {
    * If used postfix (for example, x--), then it returns the value before decrementing.
    * Operator: x--
    * 
+   * @export
    * @param {number} operand
    * @returns {number}
    */
@@ -161,6 +171,7 @@ export namespace Arithmetic {
    * The unary negation operator precedes its operand and negates it.
    * Operator: -x
    * 
+   * @export
    * @param {number} operand
    * @returns {number}
    */
@@ -177,6 +188,7 @@ export namespace Arithmetic {
    * to NaN.
    * Operator: +x
    * 
+   * @export
    * @param {number} operand
    * @returns {number}
    */
@@ -218,6 +230,7 @@ export namespace Comparison {
   }
 
   /**
+   * @export
    * @alias of isStrictlyEqual
    */
   export let isIdentical = isStrictlyEqual;
@@ -251,6 +264,7 @@ export namespace Comparison {
   }
 
   /**
+   * @export
    * @alias of isNotStrictlyEqual
    */
   export let isNotIdentical = isNotStrictlyEqual;
@@ -282,6 +296,7 @@ export namespace Comparison {
   }
 
   /**
+   * @export
    * @alias of isAtMost
    */
   export let isLessThanOrEqual = isAtMost;
@@ -313,6 +328,7 @@ export namespace Comparison {
   }
 
   /**
+   * @export
    * @alias of isAtLeast
    */
   export let isGreaterThanOrEqual = isAtMost;
@@ -439,6 +455,7 @@ export namespace Bitwise {
   }
 
   /**
+   * @export
    * @alias of rightShift
    */
   export let signPropagatingRightShift = rightShift;
@@ -470,6 +487,7 @@ export namespace Bitwise {
   }
 
   /**
+   * @export
    * @alias of unsignedRightShift
    */
   export let zeroFillRightLeft = unsignedRightShift;
@@ -496,6 +514,7 @@ export namespace Assignment {
   }
 
   /**
+   * @export
    * @alias of add
    */
   export let concatenate = add;
@@ -557,6 +576,7 @@ export namespace Assignment {
   }
 
   /**
+   * @export
    * @alias of modulous
    */
   export let remainder = modulous;
@@ -569,6 +589,7 @@ export namespace Assignment {
      * Operator: x **= y 
      * Meaning:  x  = x ** y
      * 
+     * @export
      * @param {number} operand1
      * @param {number} operand2
      * @returns {number}
@@ -638,6 +659,7 @@ export namespace Assignment {
   }
 
   /**
+   * @export
    * @alias of rightShift
    */
   export let signPropagatingRightShift = rightShift;
@@ -671,6 +693,7 @@ export namespace Assignment {
   }
 
   /**
+   * @export
    * @alias of unsignedRightShift
    */
   export let zeroFillRightLeft = unsignedRightShift;
