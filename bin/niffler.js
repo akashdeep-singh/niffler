@@ -10,6 +10,7 @@ var Arithmetic;
      * The addition operator produces the sum of numeric operands or string concatenation.
      * Operator: x + y
      *
+     * @export
      * @param {*} operand1
      * @param {*} operand2
      * @returns {*}
@@ -19,6 +20,7 @@ var Arithmetic;
     }
     Arithmetic.add = add;
     /**
+     * @export
      * @alias of add
      */
     Arithmetic.concatenate = add;
@@ -26,6 +28,7 @@ var Arithmetic;
      * The subtraction operator subtracts the two operands, producing their difference.
      * Operator: x - y
      *
+     * @export
      * @param {number} operand1
      * @param {number} operand2
      * @returns {number}
@@ -38,6 +41,7 @@ var Arithmetic;
      * The multiplication operator produces the product of the operands.
      * Operator: x * y
      *
+     * @export
      * @param {number} operand1
      * @param {number} operand2
      * @returns {number}
@@ -51,6 +55,7 @@ var Arithmetic;
      * divisor.
      * Operator: x / y
      *
+     * @export
      * @param {number} operand1
      * @param {number} operand2
      * @returns {number}
@@ -65,6 +70,7 @@ var Arithmetic;
      * var1 by var2 — for example — var1 modulo var2.
      * Operator: var1 % var2
      *
+     * @export
      * @param {number} operand1
      * @param {number} operand2
      * @returns {number}
@@ -89,6 +95,7 @@ var Arithmetic;
          * the base number.
          * Operator: var1 ** var2
          *
+         * @export
          * @param {number} operand1
          * @param {number} operand2
          * @returns {number}
@@ -117,6 +124,7 @@ var Arithmetic;
      * If used postfix, with operator after operand (for example, x++), then it returns the value before incrementing.
      * Operator: x++
      *
+     * @export
      * @param {number} operand
      * @returns {number}
      */
@@ -132,6 +140,7 @@ var Arithmetic;
      * If used prefix (for example, --x), then it returns the value after decrementing.
      * Operator: --x
      *
+     * @export
      * @param {number} operand
      * @returns {number}
      */
@@ -143,6 +152,7 @@ var Arithmetic;
      * If used postfix (for example, x--), then it returns the value before decrementing.
      * Operator: x--
      *
+     * @export
      * @param {number} operand
      * @returns {number}
      */
@@ -154,6 +164,7 @@ var Arithmetic;
      * The unary negation operator precedes its operand and negates it.
      * Operator: -x
      *
+     * @export
      * @param {number} operand
      * @returns {number}
      */
@@ -169,6 +180,7 @@ var Arithmetic;
      * to NaN.
      * Operator: +x
      *
+     * @export
      * @param {number} operand
      * @returns {number}
      */
@@ -209,6 +221,7 @@ var Comparison;
     }
     Comparison.isStrictlyEqual = isStrictlyEqual;
     /**
+     * @export
      * @alias of isStrictlyEqual
      */
     Comparison.isIdentical = isStrictlyEqual;
@@ -241,6 +254,7 @@ var Comparison;
     }
     Comparison.isNotStrictlyEqual = isNotStrictlyEqual;
     /**
+     * @export
      * @alias of isNotStrictlyEqual
      */
     Comparison.isNotIdentical = isNotStrictlyEqual;
@@ -271,6 +285,7 @@ var Comparison;
     }
     Comparison.isAtMost = isAtMost;
     /**
+     * @export
      * @alias of isAtMost
      */
     Comparison.isLessThanOrEqual = isAtMost;
@@ -301,6 +316,7 @@ var Comparison;
     }
     Comparison.isAtLeast = isAtLeast;
     /**
+     * @export
      * @alias of isAtLeast
      */
     Comparison.isGreaterThanOrEqual = isAtMost;
@@ -425,6 +441,7 @@ var Bitwise;
     }
     Bitwise.rightShift = rightShift;
     /**
+     * @export
      * @alias of rightShift
      */
     Bitwise.signPropagatingRightShift = rightShift;
@@ -455,6 +472,7 @@ var Bitwise;
     }
     Bitwise.unsignedRightShift = unsignedRightShift;
     /**
+     * @export
      * @alias of unsignedRightShift
      */
     Bitwise.zeroFillRightLeft = unsignedRightShift;
@@ -480,6 +498,7 @@ var Assignment;
     }
     Assignment.add = add;
     /**
+     * @export
      * @alias of add
      */
     Assignment.concatenate = add;
@@ -540,6 +559,7 @@ var Assignment;
     }
     Assignment.modulous = modulous;
     /**
+     * @export
      * @alias of modulous
      */
     Assignment.remainder = modulous;
@@ -549,6 +569,7 @@ var Assignment;
          * Operator: x **= y
          * Meaning:  x  = x ** y
          *
+         * @export
          * @param {number} operand1
          * @param {number} operand2
          * @returns {number}
@@ -617,6 +638,7 @@ var Assignment;
     }
     Assignment.rightShift = rightShift;
     /**
+     * @export
      * @alias of rightShift
      */
     Assignment.signPropagatingRightShift = rightShift;
@@ -649,6 +671,7 @@ var Assignment;
     }
     Assignment.unsignedRightShift = unsignedRightShift;
     /**
+     * @export
      * @alias of unsignedRightShift
      */
     Assignment.zeroFillRightLeft = unsignedRightShift;
