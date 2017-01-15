@@ -12,7 +12,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akashdeep-singh/niffler.git"
-  },  
+  },
   "keywords": [
     "js",
     "nodejs",
@@ -27,7 +27,7 @@
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
-    "gulp-jsdoc": "^0.1.5",
+    "gulp-jsdoc3": "^1.0.1",
     "gulp-tsc": "^1.2.6",
     "gulp-uglify": "^2.0.0",
     "tape": "^4.6.3",
