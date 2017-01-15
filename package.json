@@ -1,6 +1,6 @@
 {
   "name": "niffler",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A small functional programming library for all Javascript operators.",
   "main": "dist/niffler.min.js",
   "scripts": {
