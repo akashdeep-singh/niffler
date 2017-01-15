@@ -19,3 +19,7 @@ config.gypi
 CVS
 npm-debug.log
 .vscode/
+
+src/
+bin/
+docs/
