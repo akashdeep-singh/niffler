@@ -1,5 +1,6 @@
-/// <reference types="node" />
 "use strict";
+/// <reference types="node" />
+exports.__esModule = true;
 /**
  * Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value. The
  * standard arithmetic operators are addition (+), subtraction (-), multiplication (*), and division (/).
@@ -171,6 +172,7 @@ var Arithmetic;
     function negate(operand) {
         return -(operand);
     }
+    Arithmetic.negate = negate;
     /**
      * The unary plus operator precedes its operand and evaluates to its operand but attempts to convert it into a number, if it isn't
      * already. Although unary negation (-) also can convert non-numbers, unary plus is the fastest and preferred way of converting
@@ -187,6 +189,7 @@ var Arithmetic;
     function plus(operand) {
         return +(operand);
     }
+    Arithmetic.plus = plus;
 })(Arithmetic = exports.Arithmetic || (exports.Arithmetic = {}));
 /**
  * The comparison operators determine, if the two operands meet the given condition.
@@ -280,15 +283,15 @@ var Comparison;
      * @param {*} operand2
      * @returns {boolean}
      */
-    function isAtMost(operand1, operand2) {
+    function isAtmost(operand1, operand2) {
         return operand1 <= operand2;
     }
-    Comparison.isAtMost = isAtMost;
+    Comparison.isAtmost = isAtmost;
     /**
      * @export
      * @alias of isAtMost
      */
-    Comparison.isLessThanOrEqual = isAtMost;
+    Comparison.isLessThanOrEqual = isAtmost;
     /**
      * The greater than operator returns true if the left operand is greater than the right operand.
      * Operator: x > y
@@ -299,7 +302,7 @@ var Comparison;
      * @returns {boolean}
      */
     function isGreaterThan(operand1, operand2) {
-        return operand1 < operand2;
+        return operand1 > operand2;
     }
     Comparison.isGreaterThan = isGreaterThan;
     /**
@@ -311,15 +314,15 @@ var Comparison;
      * @param {*} operand2
      * @returns {boolean}
      */
-    function isAtLeast(operand1, operand2) {
+    function isAtleast(operand1, operand2) {
         return operand1 >= operand2;
     }
-    Comparison.isAtLeast = isAtLeast;
+    Comparison.isAtleast = isAtleast;
     /**
      * @export
      * @alias of isAtLeast
      */
-    Comparison.isGreaterThanOrEqual = isAtMost;
+    Comparison.isGreaterThanOrEqual = isAtleast;
 })(Comparison = exports.Comparison || (exports.Comparison = {}));
 /**
  * Logical operators are typically used with Boolean (logical) values. When they are, they return a Boolean value. However, the && and ||
@@ -477,192 +480,6 @@ var Bitwise;
      */
     Bitwise.zeroFillRightLeft = unsignedRightShift;
 })(Bitwise = exports.Bitwise || (exports.Bitwise = {}));
-// export namespace Assignment {
-//   /**
-//    * The addition assignment operator adds the value of the right operand to a variable and assigns the result to the variable. The types 
-//    * of the two operands determine the behavior of the addition assignment operator. Addition or concatenation is possible.
-//    * Operator: x += y 
-//    * Meaning:  x = x + y
-//    * 
-//    * @export
-//    * @param {*} operand1
-//    * @param {*} operand2
-//    * @returns {*}
-//    */
-//   export function add(operand1: any, operand2: any): any {
-//     return operand1 += operand2;
-//   }
-//   /**
-//    * @export
-//    * @alias of add
-//    */
-//   export let concatenate = add;
-//   /**
-//    * The subtraction assignment operator subtracts the value of the right operand from a variable and assigns the result to the variable.
-//    * Operator: x -= y 
-//    * Meaning:  x  = x - y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function subtract(operand1: number, operand2: number): number {
-//     return operand1 -= operand2;
-//   }
-//   /**
-//    * The multiplication assignment operator multiplies a variable by the value of the right operand and assigns the result to the variable.
-//    * Operator: x *= y 
-//    * Meaning:  x  = x * y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function multiply(operand1: number, operand2: number): number {
-//     return operand1 *= operand2;
-//   }
-//   /**
-//    * The division assignment operator divides a variable by the value of the right operand and assigns the result to the variable.
-//    * Operator: x /= y 
-//    * Meaning:  x  = x / y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function divide(operand1: number, operand2: number): number {
-//     return operand1 /= operand2;
-//   }
-//   /**
-//    * The remainder assignment operator divides a variable by the value of the right operand and assigns the remainder to the variable.
-//    * Operator: x %= y
-//    * Meaning:  x  = x % y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function modulous(operand1: number, operand2: number): number {
-//     return operand1 %= operand2;
-//   }
-//   /**
-//    * @export
-//    * @alias of modulous
-//    */
-//   export let remainder = modulous;
-//   //This is an experimental operator, part of the ECMAScript 2016 (ES7) proposal. It is only available in node 7.2.0 and above.
-//   export let exponentiation;
-//   if (parseFloat(process.versions.node) >= 7.2) {
-//     /**
-//      * The exponentiation assignment operator evaluates to the result of raising first operand to the power second operand.
-//      * Operator: x **= y 
-//      * Meaning:  x  = x ** y
-//      * 
-//      * @export
-//      * @param {number} operand1
-//      * @param {number} operand2
-//      * @returns {number}
-//      */
-//     exponentiation = function (operand1: number, operand2: number): number {
-//       return (operand1) **= (operand2);
-//     }
-//   }
-//   /**
-//    * The bitwise AND assignment operator uses the binary representation of both operands, does a bitwise AND operation on them and assigns 
-//    * the result to the variable.
-//    * Operator: x &= y 
-//    * Meaning:  x  = x & y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function and(operand1: number, operand2: number): number {
-//     return operand1 &= operand2;
-//   }
-//   /**
-//    * The bitwise OR assignment operator uses the binary representation of both operands, does a bitwise OR operation on them and assigns 
-//    * the result to the variable.
-//    * Operator: x |= y 
-//    * Meaning:  x  = x | y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function or(operand1: number, operand2: number): number {
-//     return operand1 |= operand2;
-//   }
-//   /**
-//    * The bitwise XOR assignment operator uses the binary representation of both operands, does a bitwise XOR operation on them and assigns 
-//    * the result to the variable.
-//    * Operator: x ^= y 
-//    * Meaning:  x  = x ^ y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function xor(operand1: number, operand2: number): number {
-//     return operand1 ^= operand2;
-//   }
-//   /**
-//    * The right shift assignment operator moves the specified amount of bits to the right and assigns the result to the variable.
-//    * Operator: x >>= y 
-//    * Meaning:  x   = x >> y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function rightShift(operand1: number, operand2: number): number {
-//     return operand1 >>= operand2;
-//   }
-//   /**
-//    * @export
-//    * @alias of rightShift
-//    */
-//   export let signPropagatingRightShift = rightShift;
-//   /**
-//    * The left shift assignment operator moves the specified amount of bits to the left and assigns the result to the variable.
-//    * Operator: x <<= y 
-//    * Meaning:  x   = x << y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function leftShift(operand1: number, operand2: number): number {
-//     return operand1 <<= operand2;
-//   }
-//   /**
-//    * The unsigned right shift assignment operator moves the specified amount of bits to the right and assigns the result to the variable.
-//    * Operator: x >>>= y 
-//    * Meaning:  x    = x >>> y
-//    * 
-//    * @export
-//    * @param {number} operand1
-//    * @param {number} operand2
-//    * @returns {number}
-//    */
-//   export function unsignedRightShift(operand1: number, operand2: number): number {
-//     return operand1 >>>= operand2;
-//   }
-//   /**
-//    * @export
-//    * @alias of unsignedRightShift
-//    */
-//   export let zeroFillRightLeft = unsignedRightShift;
-// }
 /**
  * Some miscellaneous operators.
  */
