@@ -45,8 +45,8 @@ postIncrement, preDecrement, postDecrement, negate, plus
 #### Comparison
 ```
 isEqual, isStrictlyEqual, isIdentical, isNotEqual, isNotStrictlyEqual,
-isNotIdentical, isLessThan, isAtMost, isLessThanOrEqual, isGreaterThan,
-isAtLeast, isGreaterThanOrEqual
+isNotIdentical, isLessThan, isAtmost, isLessThanOrEqual, isGreaterThan,
+isAtleast, isGreaterThanOrEqual
 ```
 
 
