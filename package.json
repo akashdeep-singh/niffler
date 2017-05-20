@@ -4,7 +4,7 @@
   "description": "A small functional programming library for all Javascript operators.",
   "main": "dist/niffler.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gulp test",
     "build": "gulp build",
     "clean": "gulp clean",
     "document": "gulp document"
@@ -28,6 +28,7 @@
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
     "gulp-jsdoc3": "^1.0.1",
+    "gulp-tape": "0.0.9",
     "gulp-tsc": "^1.2.6",
     "gulp-uglify": "^2.0.0",
     "tape": "^4.6.3",

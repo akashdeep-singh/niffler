@@ -5,6 +5,7 @@ const uglify = require('gulp-uglify');
 const browserify = require('gulp-browserify');
 const jsdoc3 = require('gulp-jsdoc3');
 const del = require('del');
+const tape = require('gulp-tape');
 
 gulp.task('compile', function () {
   return gulp.src('src/niffler.ts')
@@ -41,6 +42,11 @@ gulp.task('document', ['build'], function (cb) {
         "destination": "./docs/"
       }
     }, cb));
+});
+
+gulp.task('test', function () {
+  return gulp.src('tests/*.js')
+    .pipe(tape());
 });
 
 gulp.task('rebuild', ['clean', 'build', 'document']);
