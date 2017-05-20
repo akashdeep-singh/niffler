@@ -38,3 +38,6 @@ jspm_packages
 
 # VS Code config files
 .vscode
+
+# gulp-tsc
+gulp-tsc*
